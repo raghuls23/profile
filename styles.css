@@ -1,0 +1,290 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    color: #333;
+}
+
+/* Header code starts here */
+#header {
+    width: 100%;
+    min-height: 50px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    color: white;
+}
+
+#brand {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#nav a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    transition: color 0.3s;
+}
+
+#nav a:hover {
+    color: white;
+    text-decoration:underline;
+}
+
+/* About section */
+#about {
+    width: 100%;
+    padding: 40px 0;
+    background-color: lightgray     ;
+}
+
+#about .inner {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#image {
+    flex: 1 1 300px;
+    text-align: center;
+}
+
+#image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    border: 5px solid white;
+}
+#image p{
+    padding-top: 5px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+#bio {
+    flex: 2 1 600px;
+    padding: 20px;
+}
+
+#bio h2 {
+    margin-bottom: 20px;
+}
+
+#bio p {
+    text-align: justify;
+    font-size: 18px;
+}
+
+#bio a {
+    display: inline-block;
+    color: white;
+    background-color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+/* Qualification section */
+#qualification {
+    width: 100%;
+    padding: 40px 0;
+    background-color: gray;
+}
+
+#qualification h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#qualification table {
+    width: 80%;
+    margin: auto;
+    border-collapse: collapse;
+}
+
+#qualification table th,
+#qualification table td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+#qualification table th {
+    background-color: black;
+    color: white;
+}
+
+#qualification table tr {
+    background-color: lightgray;
+}
+
+/* Skills section */
+#skills {
+    width: 100%;
+    padding: 40px 0;
+    background-color: lightgray;
+}
+
+#skills h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#skills table {
+    width: 60%;
+    margin: auto;
+    border-collapse: collapse;
+}
+
+#skills table th,
+#skills table td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+#skills table th {
+    background-color: black;
+    color: white;
+}
+
+#skills table tr:nth-child(even) {
+    background-color: lightgray;
+}
+
+/* Technical Experiences section */
+#project {
+    width: 100%;
+    padding: 40px 0;
+    background-color: gray;
+    line-height: 1.6;
+}
+
+#project h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#project ul {
+    width: 80%;
+    margin: auto;
+    list-style: disc;
+    padding-left: 20px;
+}
+
+/* Co-Curricular Activities section */
+#Co-Curricular-Activities {
+    width: 100%;
+    padding: 40px 0;
+    background-color: rgb(204, 204, 204);
+}
+
+#Co-Curricular-Activities h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#Co-Curricular-Activities ul {
+    width: 80%;
+    margin: auto;
+    list-style: disc;
+    padding-left: 20px;
+    line-height: 1.6;
+}
+
+/* Contact section */
+#contact {
+    width: 100%;
+    padding: 30px 0;
+    background-color: gray;
+    padding-bottom: 0px;
+}
+
+#contact h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#foot {
+    display: flex;
+    justify-content: center;
+}
+
+#foot a {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+#footer {
+    width: 100%;
+    min-height: 50px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+}
+
+/* Scroll to top button */
+#top {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color:black;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    line-height: 40px;
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+    #nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #nav a {
+        padding: 10px;
+    }
+
+    #about .inner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #image, #bio {
+        width: 100%;
+        text-align: center;
+    }
+
+    #bio {
+        padding-top: 20px;
+    }
+
+    #skills table, #qualification table {
+        width: 90%;
+    }
+
+    #project ul, #Co-Curricular-Activities ul {
+        width: 90%;
+    }
+}
