@@ -10,7 +10,7 @@ body {
     padding-top: 51px; /* Adjusted for fixed header */
 }
 
-header {
+#header {
     width: 100%;
     min-height: 50px;
     background-color: black;
@@ -25,7 +25,7 @@ header {
 }
 
 #brand {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: bold;
 }
 
@@ -47,7 +47,7 @@ header {
 }
 
 section {
-    padding: 40px 20px;
+    padding: 2rem 1rem;
 }
 
 #about {
@@ -58,6 +58,7 @@ section {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 1rem;
 }
 
 #image {
@@ -75,32 +76,32 @@ section {
 
 #image p {
     padding-top: 5px;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: bolder;
 }
 
 #bio {
     flex: 2 1 600px;
-    padding: 20px;
+    padding: 1rem;
 }
 
 #bio h2 {
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
 }
 
 #bio p {
     text-align: justify;
-    font-size: 18px;
+    font-size: 1rem;
 }
 
 #bio a {
     display: inline-block;
     color: white;
     background-color: black;
-    padding: 10px 20px;
+    padding: 0.625rem 1.25rem;
     text-decoration: none;
     border-radius: 5px;
-    margin-top: 20px;
+    margin-top: 1rem;
     transition: background-color 0.3s;
 }
 
@@ -118,7 +119,7 @@ section {
 
 #qualification h2, #skills h2, #project h2, #Co-Curricular-Activities h2, #contact h2 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
 }
 
 table {
@@ -129,7 +130,7 @@ table {
 
 th, td {
     border: 1px solid black;
-    padding: 10px;
+    padding: 0.625rem;
     text-align: center;
 }
 
@@ -138,14 +139,14 @@ th {
     color: white;
 }
 
-tr:nth-child(1), tr:nth-child(2), tr:nth-child(3) {
+tr:nth-child(even) {
     background-color: lightgray;
 }
 
 #contact {
-    padding-bottom: 0px;
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 #foot {
@@ -158,13 +159,13 @@ tr:nth-child(1), tr:nth-child(2), tr:nth-child(3) {
 #foot a {
     color: black;
     text-decoration: none;
-    font-size: 17px;
-    padding-bottom: 20px;
+    font-size: 1.0625rem;
+    padding-bottom: 1.25rem;
 }
 
 #footer {
     width: 100%;
-    padding-top: 10px;
+    padding-top: 0.625rem;
     min-height: 50px;
     background-color: black;
     color: white;
@@ -172,55 +173,35 @@ tr:nth-child(1), tr:nth-child(2), tr:nth-child(3) {
     line-height: 50px;
 }
 
-#top {
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    background-color: black;
-    color: white;
-    font-size: 30px;
-    text-align: center;
-    line-height: 40px;
-    position: fixed;
-    bottom: 50px;
-    right: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-#top:hover {
-    background-color: #333;
-}
-
 #Co-Curricular-Activities ul, #project ul {
     list-style-type: disc;
-    padding-left: 20px;
+    padding-left: 1.25rem;
 }
 
 #Co-Curricular-Activities li, #project li {
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
     line-height: 1.6;
 }
 
 @media (max-width: 768px) {
-    header {
+    #header {
         flex-direction: column;
         align-items: flex-start;
-        padding: 10px 20px;
+        padding: 0.625rem 1.25rem;
     }
 
     #brand {
-        margin-bottom: 10px;
+        margin-bottom: 0.625rem;
     }
 
     #nav {
         flex-direction: column;
         align-items: flex-start;
-        gap: 5px;
+        gap: 0.3125rem;
     }
 
     section {
-        padding: 20px 10px;
+        padding: 1.25rem 0.625rem;
     }
 
     #about .inner {
@@ -234,12 +215,12 @@ tr:nth-child(1), tr:nth-child(2), tr:nth-child(3) {
     }
 
     #bio {
-        padding-top: 20px;
+        padding-top: 1.25rem;
     }
 
     table {
         width: 100%;
-        padding: 0 10px;
+        padding: 0 0.625rem;
     }
 
     #foot {
