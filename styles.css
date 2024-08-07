@@ -7,6 +7,7 @@
 
 body {
     color: #333;
+    padding-top: 51px; /* Adjusted for fixed header */
 }
 
 header {
@@ -18,11 +19,19 @@ header {
     align-items: center;
     padding: 0 20px;
     color: white;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
 }
 
 #brand {
     font-size: 24px;
     font-weight: bold;
+}
+
+#nav {
+    display: flex;
+    gap: 10px;
 }
 
 #nav a {
@@ -38,7 +47,7 @@ header {
 }
 
 section {
-    padding: 40px 0;
+    padding: 40px 20px;
 }
 
 #about {
@@ -94,21 +103,20 @@ section {
     margin-top: 20px;
     transition: background-color 0.3s;
 }
-#skills,#Co-Curricular-Activities{
+
+#bio a:hover {
+    background-color: #333;
+}
+
+#skills, #Co-Curricular-Activities {
     background-color: lightgray;
 }
 
-#qualification,
-#project,
-#contact {
+#qualification, #project, #contact {
     background-color: gray;
 }
 
-#qualification h2,
-#skills h2,
-#project h2,
-#Co-Curricular-Activities h2,
-#contact h2 {
+#qualification h2, #skills h2, #project h2, #Co-Curricular-Activities h2, #contact h2 {
     text-align: center;
     margin-bottom: 20px;
 }
@@ -119,8 +127,7 @@ table {
     border-collapse: collapse;
 }
 
-th,
-td {
+th, td {
     border: 1px solid black;
     padding: 10px;
     text-align: center;
@@ -131,26 +138,33 @@ th {
     color: white;
 }
 
-tr:nth-child(1),tr:nth-child(2),tr:nth-child(3) {
+tr:nth-child(1), tr:nth-child(2), tr:nth-child(3) {
     background-color: lightgray;
 }
-#contact{
+
+#contact {
     padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
 }
+
 #foot {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 #foot a {
     color: black;
     text-decoration: none;
     font-size: 17px;
-    margin: 0 10px;
+    padding-bottom: 20px;
 }
 
 #footer {
     width: 100%;
+    padding-top: 10px;
     min-height: 50px;
     background-color: black;
     color: white;
@@ -173,33 +187,40 @@ tr:nth-child(1),tr:nth-child(2),tr:nth-child(3) {
     cursor: pointer;
     transition: background-color 0.3s;
 }
-#Co-Curricular-Activities ul {
-    list-style-type:disc;
-    padding-left: 80px;
+
+#top:hover {
+    background-color: #333;
 }
 
-#Co-Curricular-Activities li {
-    margin-bottom: 10px;
-    line-height: 1.6;
-}
-#project ul {
-    list-style-type:disc;
-    padding-left: 80px;
+#Co-Curricular-Activities ul, #project ul {
+    list-style-type: disc;
+    padding-left: 20px;
 }
 
-#project li {
+#Co-Curricular-Activities li, #project li {
     margin-bottom: 10px;
     line-height: 1.6;
 }
 
- @media (max-width: 768px) {
-    #nav {
+@media (max-width: 768px) {
+    header {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
+        padding: 10px 20px;
     }
 
-    #nav a {
-        padding: 10px;
+    #brand {
+        margin-bottom: 10px;
+    }
+
+    #nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    section {
+        padding: 20px 10px;
     }
 
     #about .inner {
@@ -217,6 +238,12 @@ tr:nth-child(1),tr:nth-child(2),tr:nth-child(3) {
     }
 
     table {
-        width: 90%;
+        width: 100%;
+        padding: 0 10px;
     }
-} 
+
+    #foot {
+        flex-direction: column;
+        align-items: center;
+    }
+}
