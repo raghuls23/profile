@@ -35,15 +35,36 @@ body {
 }
 
 #nav a {
-    color: white;
+    /* color: white;
     text-decoration: none;
     padding: 15px;
-    transition: color 0.3s;
+    transition: color 0.3s; */
+    position: relative;
+    cursor: pointer;
+    color: #efefee;
+    /* font-size: 28px; */
+    padding: 0.5rem 1rem;
+    transition: color 0.25s;
+    text-decoration: none;
+}
+#nav a::after{
+    position: absolute;
+    content: "";
+    inset: 0;
+    background-color: white;
+    scale: 1 0;
+    z-index: -1;
+    transition: 0.45s;
+    border-radius: 10px;
 }
 
 #nav a:hover {
-    color: white;
-    text-decoration: underline;
+    /* color: white;
+    text-decoration: underline; */
+    color: black;
+}
+#nav a:hover::after{
+    scale:1 1;
 }
 
 section {
@@ -91,7 +112,7 @@ section {
 
 #bio p {
     text-align: justify;
-    font-size: 1rem;
+    font-size: 13pt;
 }
 
 #bio a {
@@ -121,7 +142,14 @@ section {
     text-align: center;
     margin-bottom: 1rem;
 }
-
+#Co-Curricular-Activities li{
+    text-align: justify;
+    margin-left: 50px;
+}
+#project li{
+    text-align: justify;
+    margin-left: 50px;
+}
 table {
     width: 80%;
     margin: auto;
@@ -153,13 +181,15 @@ tr:nth-child(even),tr:nth-child(odd) {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 40px;
+    padding-top: 5px;
 }
 
 #foot a {
     color: black;
     text-decoration: none;
-    font-size: 1.0625rem;
+    /* font-size: 1.0625rem; */
+    font-size:13pt ;
     padding-bottom: 1.25rem;
 }
 
@@ -182,8 +212,42 @@ tr:nth-child(even),tr:nth-child(odd) {
     margin-bottom: 0.625rem;
     line-height: 1.6;
 }
+#linkedin{
+    display: flex;
+}
+#linkedin img{
+    width: 25px;
+    height: 18px;
+    padding-right: 5px;
+}
+#whatsapp{
+    display: flex;
+}
+#whatsapp img{
+    width: 23px;
+    height: 18px;
+    padding-right: 5px;
 
-@media (max-width: 768px) {
+}
+#mail{
+    display: flex;
+}
+#mail img{
+    width: 25px;
+    height: 18px;
+    padding-right: 5px;
+}
+#mobile{
+    display: flex;
+}
+#mobile img{
+    width: 25px;
+    height: 18px;
+    padding-right: 5px;
+
+    /* rotate: deg; */
+}
+/* @media (max-width: 768px) {
     #header {
         flex-direction: column;
         align-items: flex-start;
@@ -227,4 +291,4 @@ tr:nth-child(even),tr:nth-child(odd) {
         flex-direction: column;
         align-items: center;
     }
-}
+} */
